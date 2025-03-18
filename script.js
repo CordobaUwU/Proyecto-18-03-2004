@@ -25,7 +25,7 @@ const LEVEL_SETTINGS = [
     { time: 60, speed: 1.2, spawnRate: 1800 }, // Nivel 1: Fácil, más tiempo y menos enemigos
     { time: 50, speed: 1.5, spawnRate: 1600 }, // Nivel 2: Un poco más rápido y con tiempo reducido
     { time: 40, speed: 1.8, spawnRate: 1400 }, // Nivel 3: Dificultad intermedia
-    { time: 30, speed: 2.8, spawnRate: 1200 }, // Nivel 4: Reto mayor, menos tiempo y velocidad incrementada
+    { time: 30, speed: 1.8, spawnRate: 1200 }, // Nivel 4: Reto mayor, menos tiempo y velocidad incrementada
     { time: 30, speed: 1.2, spawnRate: 800 }  // Nivel 5: Alta dificultad pero sin saturar al jugador
 ];
 
