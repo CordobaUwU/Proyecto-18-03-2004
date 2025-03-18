@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inside Bad Dream</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Pantalla de inicio -->
+  <div id="startScreen">
+    <div class="story-content">
+      <h2>Inside Bad Dream</h2>
+      <div class="story-text">
+        <p>Una noche antes de tus exámenes, agotado por horas de estudio...</p>
+        <p>Caes rendido ante el cansancio...</p>
+        <p class="glitch-effect">DESPIERTAS EN UNA REALIDAD DISTORSIONADA</p>
+        <p>Tus apuntes toman vida, convertidos en entidades corruptas.</p>
+        <p>¡Usa tu conocimiento como arma!</p>
+        <p class="warning">No dejes que lleguen a ti...<br>¡Escribe cada palabra que veas para sobrevivir!</p>
+      </div>
+      <button onclick="startJourney()">Iniciar</button>
+    </div>
+  </div>
+
+  <!-- Área principal del juego -->
+  <div class="game-area" style="visibility: hidden;">
+    <div class="collision-wall"></div>
+    <div class="player">
+      <div class="left-arm arm"></div>
+      <div class="right-arm arm"></div>
+    </div>
+    <div class="word-container"></div>
+    <div class="hud">
+      <div class="stat-box">
+        <div class="stat-label">NIVEL</div>
+        <div class="stat-value" id="level">1</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">TIEMPO</div>
+        <div class="stat-value" id="timer">60</div>
+      </div>
+    </div>
+    <input type="text" id="wordInput" placeholder="Escribe aquí" disabled>
+  </div>
+  
+  <!-- Display de texto -->
+  <div id="typingDisplay"></div>
+  
+  <!-- Pantalla de resultados -->
+  <div id="resultScreen" class="hidden">
+    <div class="result-content">
+      <h2 id="resultTitle"></h2>
+      <div id="gameOverButtons">
+        <button onclick="restartGame()">REINTENTAR</button>
+        <button onclick="hideResult()">MENÚ</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Audio de fondo -->
+  <audio id="bgMusic" src="dont.mp3" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
